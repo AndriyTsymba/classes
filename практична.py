@@ -7,3 +7,12 @@ class Student:
         print(f"імя {self.name}, Bik {self.age}")
 studednt = Student("Andriy",15)
 studednt.info()
+#2
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+circle = Circle(10)
+print(circle.area())
