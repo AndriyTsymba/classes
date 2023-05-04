@@ -24,3 +24,34 @@ class Dog:
         print("Гав"," афуф")
 my_dog = Dog()
 my_dog.sound()
+#4
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+        else:
+            print("Неприпустима сума для внесення!")
+
+    def withdraw(self, amount):
+        if amount > 0:
+            if self.balance >= amount:
+                self.balance -= amount
+            else:
+                print("Недостатньо коштів на рахунку!")
+        else:
+            print("Неприпустима сума для зняття!")
+
+    def get_balance(self):
+        return self.balance
+account = BankAccount("Olga")
+account.deposit(1000)
+print(account.get_balance())
+account.withdraw(500)
+print(account.get_balance())
+account.withdraw(1000)
+account.deposit(-100)
+
