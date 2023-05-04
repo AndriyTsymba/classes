@@ -16,3 +16,11 @@ class Circle:
 
 circle = Circle(10)
 print(circle.area())
+#3
+def sound (self):
+    print("варинка видає звук")
+class Dog:
+    def sound(self):
+        print("Гав"," афуф")
+my_dog = Dog()
+my_dog.sound()
